@@ -16,6 +16,7 @@ public class SpawnManager : NetworkBehaviour {
     // Use this for initialization
     void Start () {
         CmdSpawnManager();
+        CmdSpawnOscillartor();
     }
 
 

@@ -7,15 +7,13 @@ public class PlayerRespawner : NetworkBehaviour {
     public float respawnTime = 2;
 
     [Command]
-
     public void CmdRespawn(GameObject player)
     {
-
+        StartCoroutine(Respawn(player, respawnTime));
     }
 
   
-
-    IEnumerable Respawn(GameObject player, float delayTime)
+    IEnumerator Respawn(GameObject player, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
         Spawn spawnObject = FindSpawn(player.GetComponent<TeamManager>().GetTeam());
