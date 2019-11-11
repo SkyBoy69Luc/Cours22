@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class AimController : MonoBehaviour {
+public class AimController : NetworkBehaviour {
     [SerializeField] GameObject aimedTargetLocation;
     [SerializeField] GameObject unaimedTargetLocation;
     [SerializeField] float timeToAim=1f;
@@ -23,13 +23,21 @@ public class AimController : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetAxis("Fire2") > 0) {
-            isAiming = true;
-            AjustProgression();
-        } else {
-            isAiming = false;
-            AjustProgression();
+
+        if (isLocalPlayer)
+        {
+            if (Input.GetAxis("Fire2") > 0)
+            {
+                isAiming = true;
+                AjustProgression();
+            }
+            else
+            {
+                isAiming = false;
+                AjustProgression();
+            }
         }
+
 	}
 
     public bool IsAiming() {
