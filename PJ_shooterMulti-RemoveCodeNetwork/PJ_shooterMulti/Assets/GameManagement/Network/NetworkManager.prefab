@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458528161095044}
   - component: {fileID: 114112332961380282}
+  - component: {fileID: 114728032578501818}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -66,7 +67,11 @@ MonoBehaviour:
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
   m_OnlineScene: Map
-  m_SpawnPrefabs: []
+  m_SpawnPrefabs:
+  - {fileID: 1938791616204830, guid: 95654ce4eb4cffe4a815c23908332a8f, type: 2}
+  - {fileID: 1241947320355084, guid: 1a90993e9ae035f42885247ed0ec4a10, type: 2}
+  - {fileID: 1560730898078350, guid: a540484c169d3164bb34debf989be37a, type: 2}
+  - {fileID: 1524428382102448, guid: 9f8052fb5481bad4ca869422df52d8c1, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -122,3 +127,18 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
+--- !u!114 &114728032578501818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122829785611808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
